@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Concert-Ticket-Booking-System/static/css/main.3ae94e70.css",
+    "main.js": "/Concert-Ticket-Booking-System/static/js/main.a83f5092.js",
+    "static/js/453.64512fd7.chunk.js": "/Concert-Ticket-Booking-System/static/js/453.64512fd7.chunk.js",
+    "index.html": "/Concert-Ticket-Booking-System/index.html",
+    "main.3ae94e70.css.map": "/Concert-Ticket-Booking-System/static/css/main.3ae94e70.css.map",
+    "main.a83f5092.js.map": "/Concert-Ticket-Booking-System/static/js/main.a83f5092.js.map",
+    "453.64512fd7.chunk.js.map": "/Concert-Ticket-Booking-System/static/js/453.64512fd7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ae94e70.css",
+    "static/js/main.a83f5092.js"
+  ]
+}
