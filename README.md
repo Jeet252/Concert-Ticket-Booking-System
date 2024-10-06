@@ -9,3 +9,7 @@
 7. In this project i have use combination of filter with map and inside that another filter with map.
 8. I have also use disabled arrtibutes of button tag.
 9. On onClick function i have pass many data parameter for data mangement.
+
+
+
+### Link: https://jeet252.github.io/Concert-Ticket-Booking-System/
