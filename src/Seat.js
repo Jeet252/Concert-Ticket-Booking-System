@@ -6,7 +6,7 @@ export default function Seat() {
   const [booked, setBooked] = useState(false);
   const ticketClass = {
     vip: "VIP",
-    bisnness: "Bissness",
+    business: "Business",
     economy: "economy",
   };
 
@@ -55,10 +55,10 @@ export default function Seat() {
   }
   return (
     <div className="container">
-
       <div className="seat-selecting-area">
+        <h4 className="heading">Concert Ticket Booking system</h4>
         <h3>{ticketClass.vip}</h3>         {/*this is vip class section */}
-        <div>
+        <div className="vip">
           {seat
             .filter((a, index) => index < 5)
             .map((elem, index) => (
@@ -68,6 +68,7 @@ export default function Seat() {
                   .map((chair) => (
                     <button
                       key={chair}
+                      className="seat-btn"
                       onClick={(e) =>
                         handleclick(index + 1, chair, ticketClass.vip, e)
                       }
@@ -79,8 +80,8 @@ export default function Seat() {
               </div>
             ))}
         </div>
-        <h3>{ticketClass.bisnness}</h3>         {/*this is bisness class section */}
-        <div>
+        <h3>{ticketClass.business}</h3>         {/*this is bisness class section */}
+        <div className="business">
           {seat
             .filter((a, index) => index < 6)
             .map((elem, index) => (
@@ -90,8 +91,9 @@ export default function Seat() {
                   .map((chair) => (
                     <button
                       key={chair}
+                      className="seat-btn"
                       onClick={(e) =>
-                        handleclick(index + 1, chair, ticketClass.bisnness, e)
+                        handleclick(index + 1, chair, ticketClass.business, e)
                       }
                       disabled={booked}
                     >
@@ -102,7 +104,7 @@ export default function Seat() {
             ))}
         </div>
         <h3>{ticketClass.economy}</h3>         {/*this is economy class section */}
-        <div>
+        <div className="economy">
           {seat
             .filter((a, index) => index < 7)
             .map((elem, index) => (
@@ -112,6 +114,7 @@ export default function Seat() {
                   .map((chair) => (
                     <button
                       key={chair}
+                      className="seat-btn"
                       onClick={(e) =>
                         handleclick(index + 1, chair, ticketClass.economy, e)
                       }
@@ -125,16 +128,16 @@ export default function Seat() {
         </div>
       </div>
       <div className="booking-area">
-        <h4>Concert Ticket Booking system</h4>
+
         <h5>You have selected {ticket}</h5>
         <>
           {
             Array.from(selectedSeat).map((elem, index) => (
-              <li key={index}>{elem.class},{elem.column} {elem.row}</li>
+              <li key={index} className="ticket-list">{elem.class},{elem.column} {elem.row}</li>
             ))
           }
         </>
-        <button onClick={handlebook} style={{ display: ticket > 0 ? "flex" : "none" }}>Book Tickets</button>
+        <button className="book-btn" onClick={handlebook} style={{ display: ticket > 0 ? "flex" : "none" }}>Book Tickets</button>
 
       </div>
     </div>

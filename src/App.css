@@ -1,15 +1,58 @@
-button {
+.seat-btn {
   background-color: green;
+  margin: 2px;
+  height: 30px;
+  width: 30px;
 }
 .container {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 .seat-selecting-area {
   min-width: fit-content;
   min-height: fit-content;
+  flex: 2 0 auto;
+  flex: 1 0 auto;
 }
 .booking-area {
   min-width: fit-content;
   min-height: fit-content;
+  flex: 1 0 auto;
+}
+.heading {
+  flex: 1 0 auto;
+}
+.book-btn {
+  justify-content: center;
+  background-color: steelblue;
+  color: aliceblue;
+  font-size: 0.95rem;
+  justify-self: center;
+  border-radius: 9px;
+  width: 104px;
+  margin: 11px;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  h3,
+  h5,
+  h4 {
+    text-align: center;
+  }
+  .seat-selecting-area,
+  .booking-area {
+    display: grid;
+    justify-content: center;
+  }
+  .vip,
+  .business,
+  .economy,
+  .ticket-list {
+    justify-self: center;
+  }
 }
